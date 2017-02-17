@@ -5,7 +5,7 @@
  * Copyright (c) 2013-2017 weihanchen
  * License: MIT
  *
- * Generated at 2017-02-17 21:43:30 +0800
+ * Generated at 2017-02-17 21:48:56 +0800
  */
 /**
  * @ngdoc directive

@@ -11,11 +11,6 @@ module.exports = {
          flatten: true,
          src: ['<%= bower.js.angular %>'],
          dest: '<%= examples.js.plugins.angular %>'
-      }, {
-         expand: true,
-         flatten: true,
-         src: ['<%= bower.js.jquery %>'],
-         dest: '<%= examples.js.plugins.jquery %>'
       }]
    }
 };
