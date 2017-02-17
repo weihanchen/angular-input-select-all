@@ -1,15 +1,20 @@
 angular-input-select-all
 ===
+## Requirements
 
-## Build
+- AngularJS 1.3+
+- A modern browser (Chrome 31+, Firefox 29+, Safari 7+, Opera 12+, IE 10+)
+
+## General requirements before running on development
 ```
 $ npm install
 $ npm run bower:install
 ```
 
-## Requirements
-
-- AngularJS 1.3+
-- A modern browser (Chrome 31+, Firefox 29+, Safari 7+, Opera 12+, IE 10+)
+## Test
+```
+$npm run test
+$npm run test:coverage
+```
 
 ## Installing
