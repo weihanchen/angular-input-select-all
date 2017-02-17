@@ -22,13 +22,25 @@ module.exports = function(grunt) {
       bowerFile: 'bower.json',
       files: {
          js: {
-            src: 'src/<%= pkg.name %>.js',
+            src: ['src/<%= pkg.name %>.js'],
             out: 'build/<%= pkg.name %>.js',
             outMin: 'build/<%= pkg.name %>.min.js'
          },
          spec: {
             src: 'test/*.spec.js'
          }
+      },
+      banners: {
+         unminified: '/*!\n' +
+            ' * <%= pkg.prettyName %> v<%= pkg.version %>\n' +
+            ' * <%= pkg.homepage %>\n' +
+            ' *\n' +
+            ' * Copyright (c) 2013-<%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n' +
+            ' * License: <%= pkg.license %>\n' +
+            ' *\n' +
+            ' * Generated at <%= grunt.template.today("yyyy-mm-dd HH:MM:ss o") %>\n' +
+            ' */',
+         minified: '/*! <%= pkg.prettyName %> v<%= pkg.version %> License: <%= pkg.license %> */'
       }
    };
 
@@ -43,6 +55,7 @@ module.exports = function(grunt) {
 
    grunt.registerTask('javascript-only', [
       // 'test',
+      'concat',
       'ngAnnotate',
       'uglify'
    ]);
