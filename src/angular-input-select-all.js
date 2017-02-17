@@ -23,7 +23,7 @@
          $element.on('click', function() {
             var isInputSelected = $element[0].selectionEnd - $element[0].selectionStart != 0;
             if (!isInputSelected) {
-               $element.select();
+               $element[0].select();
             }
          });
       }
