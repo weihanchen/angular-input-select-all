@@ -20,6 +20,6 @@ $npm run test:coverage
 ## Installing
 
 ## Directive Usage
-```
+```html
 <input type="text" ng-model="appCtrl.text" placeholder="Please input some text and test select all operation..." input-select-all />
 ```

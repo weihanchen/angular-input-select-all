@@ -5,7 +5,7 @@
  * Copyright (c) 2013-2017 weihanchen
  * License: MIT
  *
- * Generated at 2017-02-17 21:48:56 +0800
+ * Generated at 2017-02-17 22:43:32 +0800
  */
 /**
  * @ngdoc directive
@@ -33,6 +33,8 @@
             var isInputSelected = $element[0].selectionEnd - $element[0].selectionStart != 0;
             if (!isInputSelected) {
                $element[0].select();
+               console.log($element[0].selectionEnd)
+               console.log($element[0].selectionStart)
             }
          });
       }
