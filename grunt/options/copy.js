@@ -3,9 +3,19 @@ module.exports = {
       files: [{
          expand: true,
          flatten: true,
-         src: ['build/*.js'],
-         dest: 'examples',
+         src: ['<%= files.js.out %>', '<%= files.js.outMin %>'],
+         dest: '<%= examples.js.plugins.root %>/<%= pkg.name %>',
          filter: 'isFile'
+      },{
+         expand: true,
+         flatten: true,
+         src: ['<%= bower.js.angular %>'],
+         dest: '<%= examples.js.plugins.angular %>'
+      }, {
+         expand: true,
+         flatten: true,
+         src: ['<%= bower.js.jquery %>'],
+         dest: '<%= examples.js.plugins.jquery %>'
       }]
    }
 };

@@ -1,11 +1,11 @@
 /*!
  * ngInputSelectAll v0.1.0
- * https://weihanchen.github.io/angular-input-select-all/example
+ * https://weihanchen.github.io/angular-input-select-all
  *
  * Copyright (c) 2013-2017 weihanchen
  * License: MIT
  *
- * Generated at 2017-02-17 20:08:52 +0800
+ * Generated at 2017-02-17 21:41:14 +0800
  */
 /**
  * @ngdoc directive
@@ -31,7 +31,6 @@
       function selectAllController($element) {
          $element.on('click', function() {
             var isInputSelected = $element[0].selectionEnd - $element[0].selectionStart != 0;
-            console.log($element[0].selectionEnd);
             if (!isInputSelected) {
                $element.select();
             }

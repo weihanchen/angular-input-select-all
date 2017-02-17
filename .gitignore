@@ -2,3 +2,5 @@
 /bower_components
 /coverage
 npm-debug.log
+/examples/js/plugins
+/examples/css/plugins

@@ -22,7 +22,6 @@
       function selectAllController($element) {
          $element.on('click', function() {
             var isInputSelected = $element[0].selectionEnd - $element[0].selectionStart != 0;
-            console.log($element[0].selectionEnd);
             if (!isInputSelected) {
                $element.select();
             }

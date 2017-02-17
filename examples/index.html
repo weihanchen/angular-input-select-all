@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="js/plugins/jquery/jquery.min.js"></script>
+    <script src="js/plugins/angular/angular.min.js"></script>
+    <script src="js/controllers/app.js"></script>
+    <script src="js/plugins/angular-input-select-all/angular-input-select-all.js"></script>
+  </head>
+  <body ng-controller="appController as appCtrl">
+      <input type="text" ng-model="appCtrl.text" placeholder="Please input some text and test select all operation..." input-select-all />
+  </body>
+</html>

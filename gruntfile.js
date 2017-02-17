@@ -18,8 +18,27 @@ module.exports = function(grunt) {
 
    var config = {
       pkg: grunt.file.readJSON('package.json'),
-      bowerDirectory: '',
-      bowerFile: 'bower.json',
+      bower: {
+        js: {
+          angular: 'bower_components/angular/angular.min.js',
+          jquery: 'bower_components/jquery/dist/jquery.min.js'
+        },
+        file: 'bower.json'
+      },
+      examples: {
+         js: {
+           plugins: {
+             root: 'examples/js/plugins',
+             angular: 'examples/js/plugins/angular',
+             jquery: 'examples/js/plugins/jquery'
+           }
+         },
+         css: {
+           plugins: {
+             root: 'examples/css/plugins'
+           }
+         }
+      },
       files: {
          js: {
             src: ['src/<%= pkg.name %>.js'],
