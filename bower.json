@@ -1,0 +1,29 @@
+{
+    "name": "angular-input-select-all",
+    "version": "0.1.0",
+    "description": "Simple input select all, prevent interrupted user's operation",
+    "main": ["dist/angular-input-select-all.js"],
+    "authors": [
+        "weihanchen"
+    ],
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "license": "MIT",
+    "dependencies": {
+        "angular": "^1.3.0",
+        "angular-mocks": "^1.6.2"
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "src",
+        "test",
+        "tests",
+        "lib",
+        "examples"
+    ],
+    "private": false
+}
