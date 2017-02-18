@@ -1,5 +1,7 @@
 angular-input-select-all
 ===
+Simple input select all on click, prevent interrupted user's operation
+
 ## Requirements
 
 - AngularJS 1.3+

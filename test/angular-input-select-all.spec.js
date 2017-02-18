@@ -11,8 +11,9 @@ describe('angular-input-select-all directive', function() {
    }));
 
    function compile() {
-      var templete = '<div><input type="text" placeholder="Please input some text..." ng-model="text" input-select-all /></div>';
+      var templete = '<div><input placeholder="Please input some text..." ng-model="text" input-select-all /></div>';
       element = $compile(templete)($scope);
+      document.body.appendChild(element[0]);//append element to dom
       $scope.$digest();
       isolateScope = element.isolateScope();
    }
@@ -23,9 +24,7 @@ describe('angular-input-select-all directive', function() {
 
    function clickInput() {
       var input = getInput();
-      input[0].selectionStart = 1;
-      input[0].focus();
-      return input[0].select();
+      return input[0].click();
    }
 
    function getInput() {
@@ -45,14 +44,9 @@ describe('angular-input-select-all directive', function() {
       });
 
       it('trigger select all if it first click', function() {
-          //Arrange
-          var input = element.find('input');
-          input.triggerHandler('click');
-
-
          //Act
+         clickInput();
          $scope.$digest();
-         $timeout.flush(1000);
          //Assert
          expect(isInputSelectAll()).toBe(true);
       });

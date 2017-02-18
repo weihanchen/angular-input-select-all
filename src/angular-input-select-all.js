@@ -24,8 +24,6 @@
             var isInputSelected = $element[0].selectionEnd - $element[0].selectionStart != 0;
             if (!isInputSelected) {
                $element[0].select();
-               console.log($element[0].selectionEnd)
-               console.log($element[0].selectionStart)
             }
          });
       }

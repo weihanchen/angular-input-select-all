@@ -2,7 +2,7 @@
     "name": "angular-input-select-all",
     "prettyName": "ngInputSelectAll",
     "version": "0.1.0",
-    "description": "Simple input select all, prevent interrupted user's operation",
+    "description": "Simple input select all on click, prevent interrupted user's operation",
     "node-main": "./run.js",
     "license": "MIT",
     "homepage": "https://weihanchen.github.io/angular-input-select-all",
