@@ -15,8 +15,11 @@ git config --global user.name "${GITHUB_USER}"
 git clone $FULL_REPO $TARGET_FOLDER
 cd $TARGET_FOLDER
 git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
+# clean cache files
+git clean -fxd
 cd ../
 cp examples/* $TARGET_FOLDER
+cd $TARGET_FOLDER
 # If there are no changes to the compiled out (e.g. this is a README update) then just bail.
 if [ -z `git diff --exit-code` ]; then
     echo "No changes to the output on this push; exiting."
