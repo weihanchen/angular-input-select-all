@@ -36,7 +36,9 @@ module.exports = function(grunt) {
          css: {
            plugins: {
              root: 'examples/css/plugins',
-             materialDesignLite: 'examples/css/plugins/material-design-lite',
+             fontAwesome: 'examples/css/plugins/font-awesome',
+             fonts: 'examples/css/plugins/fonts',
+             materialDesignLite: 'examples/css/plugins/material-design-lite'
            }
          }
       },
@@ -57,7 +59,11 @@ module.exports = function(grunt) {
           materialDesignLite: 'node_modules/material-design-lite/material.min.js'
         },
         css: {
+          fontAwesome: 'node_modules/font-awesome/css/font-awesome.min.css',
           materialDesignLite: 'node_modules/material-design-lite/material.min.css'
+        },
+        fonts: {
+          fontAwesome: 'node_modules/font-awesome/fonts'
         }
       },
       banners: {

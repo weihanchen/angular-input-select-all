@@ -21,6 +21,16 @@ module.exports = {
          flatten: true,
          src: ['<%= npm.css.materialDesignLite %>'],
          dest: '<%= examples.css.plugins.materialDesignLite %>'
+      }, {
+         expand: true,
+         flatten: true,
+         src: ['<%= npm.css.fontAwesome %>'],
+         dest: '<%= examples.css.plugins.fontAwesome %>'
+      }, {
+         expand: true,
+         flatten: true,
+         src: ['<%= npm.fonts.fontAwesome %>/*'],
+         dest: '<%= examples.css.plugins.fonts %>'
       }]
    }
 };

@@ -4,7 +4,7 @@
  *
  * License: MIT
  *
- * Generated at 2017-02-19 20:52:23 +0800
+ * Generated at 2017-02-19 22:11:54 +0800
  */
 /**
  * @ngdoc directive
