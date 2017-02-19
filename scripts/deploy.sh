@@ -20,11 +20,6 @@ git clean -fxd
 cd ../
 cp -r examples/* $TARGET_FOLDER
 cd $TARGET_FOLDER
-# If there are no changes to the compiled out (e.g. this is a README update) then just bail.
-if [ -z `git diff --exit-code` ]; then
-    echo "No changes to the output on this push; exiting."
-    exit 0
-fi
 git add .
 MESSAGE=`date +\ %Y-%m-%d\ %H:%M:%S`
 git commit -m "Site updated:${MESSAGE}"
