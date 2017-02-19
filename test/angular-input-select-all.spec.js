@@ -54,8 +54,6 @@ describe('angular-input-select-all directive', function() {
 
    }
 
-
-
    describe('basic features', function() {
       beforeEach(function() {
          $scope.text = "Hello";
@@ -75,7 +73,6 @@ describe('angular-input-select-all directive', function() {
          var input = getInput();
          //Act
          input[0].click();
-         $timeout.flush();
          input[0].click();
          inputSelect();
          $timeout.flush();
@@ -91,7 +88,6 @@ describe('angular-input-select-all directive', function() {
          //Act
          inputSelect(0, end);
          input[0].click();
-         $timeout.flush();
          inputSelect(length, length);
          input[0].click();
          $timeout.flush();

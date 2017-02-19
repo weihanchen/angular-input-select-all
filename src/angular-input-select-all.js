@@ -25,10 +25,6 @@
             if (!isInputSelected) {
                $element[0].select();
             }
-
-           $timeout(function() {
-           }, 100)
-
          });
       }
    }
