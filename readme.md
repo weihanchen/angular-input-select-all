@@ -24,6 +24,7 @@ run command `$npm run release` then generate folder list
 * /examples/js/plugins
 
 ## Installing
+* Direct download[(https://github.com/weihanchen/angular-input-select-all/releases)](https://github.com/weihanchen/angular-input-select-all/releases)
 
 ## Directive Usage
 ```html
