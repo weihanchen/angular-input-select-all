@@ -23,4 +23,4 @@ cd $TARGET_FOLDER
 git add .
 MESSAGE=`date +\ %Y-%m-%d\ %H:%M:%S`
 git commit -m "Site updated:${MESSAGE}"
-git push --force "https://${GITHUB_TOKEN}${GITHUB_REPO}" $SOURCE_BRANCH:$TARGET_BRANCH > /dev/null 2>&1
+git push --force "https://${GITHUB_TOKEN}${GITHUB_REPO}" $TARGET_BRANCH:$TARGET_BRANCH > /dev/null 2>&1
