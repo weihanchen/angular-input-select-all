@@ -9,8 +9,18 @@ module.exports = {
       },{
          expand: true,
          flatten: true,
-         src: ['<%= bower.js.angular %>'],
+         src: ['<%= npm.js.angular %>'],
          dest: '<%= examples.js.plugins.angular %>'
+      }, {
+         expand: true,
+         flatten: true,
+         src: ['<%= npm.js.materialDesignLite %>'],
+         dest: '<%= examples.js.plugins.materialDesignLite %>'
+      }, {
+         expand: true,
+         flatten: true,
+         src: ['<%= npm.css.materialDesignLite %>'],
+         dest: '<%= examples.css.plugins.materialDesignLite %>'
       }]
    }
 };

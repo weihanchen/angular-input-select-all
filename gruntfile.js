@@ -30,12 +30,14 @@ module.exports = function(grunt) {
            plugins: {
              root: 'examples/js/plugins',
              angular: 'examples/js/plugins/angular',
+             materialDesignLite: 'examples/js/plugins/material-design-lite',
              jquery: 'examples/js/plugins/jquery'
            }
          },
          css: {
            plugins: {
-             root: 'examples/css/plugins'
+             root: 'examples/css/plugins',
+             materialDesignLite: 'examples/css/plugins/material-design-lite',
            }
          }
       },
@@ -48,6 +50,16 @@ module.exports = function(grunt) {
          spec: {
             src: 'test/*.spec.js'
          }
+      },
+      npm: {
+        js: {
+          angular: 'node_modules/angular/angular.min.js',
+          angularMocks: 'node_modules/angular-mocks/angular-mocks.js',
+          materialDesignLite: 'node_modules/material-design-lite/material.min.js'
+        },
+        css: {
+          materialDesignLite: 'node_modules/material-design-lite/material.min.css'
+        }
       },
       banners: {
          unminified: '/*!\n' +

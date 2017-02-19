@@ -12,8 +12,8 @@ module.exports = function(config) {
 
       // list of files / patterns to load in the browser
       files: [
-         'bower_components/angular/angular.min.js',
-         'bower_components/angular-mocks/angular-mocks.js',
+         'node_modules/angular/angular.min.js',
+         'node_modules/angular-mocks/angular-mocks.js',
          'src/angular-input-select-all.js',
          'test/*.spec.js'
       ],
@@ -54,7 +54,7 @@ module.exports = function(config) {
       // - Safari (only Mac)
       // - PhantomJS
       // - IE (only Windows)
-      browsers: ['chrome'],
+      browsers: ['PhantomJS'],
 
       // If browser does not capture in given timeout [ms], kill it
       captureTimeout: 60000,

@@ -1,0 +1,7 @@
+.container {
+   margin-top: 2em;
+}
+
+.demo-card-wide.mdl-card {
+  width: 512px;
+}

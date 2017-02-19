@@ -1,6 +1,8 @@
 angular-input-select-all
 ===
-Simple input select all on click, prevent interrupted user's operation
+[![Build Status](https://travis-ci.org/weihanchen/angular-input-select-all.svg?branch=master)](https://travis-ci.org/weihanchen/angular-input-select-all)
+
+## [Demo](https://weihanchen.github.io/angular-input-select-all/)
 
 ## Requirements
 
@@ -25,6 +27,14 @@ run command `$npm run release` then generate folder list
 
 ## Installing
 * Direct download[(https://github.com/weihanchen/angular-input-select-all/releases)](https://github.com/weihanchen/angular-input-select-all/releases)
+* Bower(`bower install angular-input-select-all`)
+* NPM(`npm install angular-input-select-all`)
+
+Add the scripts to your application.
+```
+<script src="angular.js"></script>
+<script src="build/angular-input-select-all.min.js"></script>
+```
 
 ## Directive Usage
 ```html

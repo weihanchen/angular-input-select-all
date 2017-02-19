@@ -10,12 +10,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/weihanchen/angular-input-select-all.git"
   },
   "license": "MIT",
   "dependencies": {
-    "angular": "^1.3.0",
-    "angular-mocks": "^1.6.2"
+    "angular": "^1.3.0"
   },
   "ignore": [
     "**/.*",

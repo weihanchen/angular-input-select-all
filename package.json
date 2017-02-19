@@ -23,7 +23,11 @@
         "selectAll"
     ],
     "main": ["dist/angular-input-select-all.min.js"],
-    "dependencies": {},
+    "dependencies": {
+        "angular": "^1.3.0",
+        "angular-mocks": "~1.6.2",
+        "material-design-lite": "~1.3.0"
+    },
     "devDependencies": {
         "bower": "~1.8.0",
         "eslint": "~3.15.0",

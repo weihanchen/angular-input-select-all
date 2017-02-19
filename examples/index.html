@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html ng-app="app">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/plugins/material-design-lite/material.min.css" />
     <script src="js/plugins/angular/angular.min.js"></script>
     <script src="js/controllers/app.js"></script>
     <script src="js/plugins/angular-input-select-all/angular-input-select-all.js"></script>
-  </head>
-  <body ng-controller="appController as appCtrl">
-      <input type="text"  placeholder="Please input some text and test select all operation..." input-select-all />
-  </body>
+    <script src="js/plugins/material-design-lite/material.min.js"></script>
+</head>
+
+<body ng-controller="appController as appCtrl">
+    <div class="container">
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">Angular input select all on click</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                You can input some text then click the textbox below, or trying select some text section then click range in secion, the plugin will detect your selection action and not trigger select all to interrupt your operation.
+
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input id="input-field" class="mdl-textfield__input" type="text" ng-model="appCtrl.text" input-select-all>
+                    <label class="mdl-textfield__label" for="input-field">Please input some text and test select all operation...</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield">
+                    <textarea class="mdl-textfield__input" type="text" rows="3" id="text-area" input-select-all></textarea>
+                    <label class="mdl-textfield__label" for="text-area">Please input some text and test select all operation...</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
 </html>
