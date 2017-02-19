@@ -1,6 +1,7 @@
 .container {
-   margin-left: 25%;
    margin-top: 5em;
+   display: block;
+   margin-left: 50em;
 }
 
 .demo-card-wide.mdl-card {
