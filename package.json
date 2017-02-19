@@ -50,6 +50,7 @@
         "esLint:init": "./node_modules/.bin/eslint --init",
         "test": "grunt test",
         "pack": "grunt pack",
-        "release": "grunt release && node run.js"
+        "release": "grunt release",
+        "dev": "grunt release && node run.js"
     }
 }

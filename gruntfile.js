@@ -72,7 +72,7 @@ module.exports = function(grunt) {
    grunt.registerTask('coverage', ['test', 'open:coverage']);
 
    grunt.registerTask('javascript-only', [
-      // 'test',
+      'test',
       'concat',
       'ngAnnotate',
       'uglify'

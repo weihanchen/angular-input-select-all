@@ -4,7 +4,7 @@
  *
  * License: MIT
  *
- * Generated at 2017-02-19 13:19:26 +0800
+ * Generated at 2017-02-19 13:25:50 +0800
  */
 /**
  * @ngdoc directive
@@ -33,10 +33,6 @@
             if (!isInputSelected) {
                $element[0].select();
             }
-
-           $timeout(function() {
-           }, 100)
-
          });
       }
    }

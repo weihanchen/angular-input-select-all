@@ -17,6 +17,11 @@ $ npm run bower:install
 ```
 $npm run test
 ```
+## Release
+run command `$npm run release` then generate folder list
+* /build
+* /coverage
+* /examples/js/plugins
 
 ## Installing
 
