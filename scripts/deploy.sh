@@ -5,7 +5,7 @@ SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 TARGET_FOLDER="public"
 GITHUB_REPO="@github.com/weihanchen/angular-input-select-all.git"
-FULL_REPO="https://$GITHUB_TOKEN$GITHUB_REPO"
+FULL_REPO="https://${GITHUB_TOKEN}${GITHUB_REPO}"
 
 # config
 git config --global user.email "${GITHUB_MAIL}"
