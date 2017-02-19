@@ -3,7 +3,6 @@
     "prettyName": "ngInputSelectAll",
     "version": "0.1.0",
     "description": "Simple input select all on click, prevent interrupted user's operation",
-    "node-main": "./run.js",
     "license": "MIT",
     "homepage": "https://weihanchen.github.io/angular-input-select-all",
     "author": {
@@ -12,17 +11,18 @@
     },
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/weihanchen/angular-input-select-all.git"
     },
     "bugs": {
-        "url": ""
+        "url": "https://github.com/weihanchen/angular-input-select-all/issues"
     },
     "keywords": [
         "angular",
         "input",
-        "selectAll"
+        "selectAll",
+        "onClick"
     ],
-    "main": ["dist/angular-input-select-all.min.js"],
+    "main": "build/angular-input-select-all.min.js",
     "dependencies": {
         "angular": "^1.3.0",
         "angular-mocks": "~1.6.2",
