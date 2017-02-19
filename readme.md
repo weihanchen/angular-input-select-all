@@ -27,5 +27,6 @@ run command `$npm run release` then generate folder list
 
 ## Directive Usage
 ```html
-<input type="text" ng-model="appCtrl.text" placeholder="Please input some text and test select all operation..." input-select-all />
+<input type="text" ng-model="appCtrl.text"
+       placeholder="Please input some text and test select all operation..." input-select-all />
 ```
