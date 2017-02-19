@@ -2,10 +2,9 @@
  * ngInputSelectAll v0.1.0
  * https://weihanchen.github.io/angular-input-select-all
  *
- * Copyright (c) 2013-2017 weihanchen
  * License: MIT
  *
- * Generated at 2017-02-19 00:24:08 +0800
+ * Generated at 2017-02-19 13:19:26 +0800
  */
 /**
  * @ngdoc directive
@@ -23,18 +22,21 @@
    function inputSelectAll() {
       return {
          restrict: 'A',
-         controller: ['$element', selectAllController],
+         controller: ['$element', '$timeout', selectAllController],
          controllerAs: 'selectAllCtrl',
          bindToController: true
       };
 
-      function selectAllController($element) {
+      function selectAllController($element, $timeout) {
          $element.on('click', function() {
-            var isInputSelected = $element[0].selectionEnd - $element[0].selectionStart != 0;
+            var isInputSelected = $element[0].selectionEnd != $element[0].selectionStart;
             if (!isInputSelected) {
                $element[0].select();
-               console.log($element)
             }
+
+           $timeout(function() {
+           }, 100)
+
          });
       }
    }

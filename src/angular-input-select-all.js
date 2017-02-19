@@ -14,17 +14,21 @@
    function inputSelectAll() {
       return {
          restrict: 'A',
-         controller: ['$element', selectAllController],
+         controller: ['$element', '$timeout', selectAllController],
          controllerAs: 'selectAllCtrl',
          bindToController: true
       };
 
-      function selectAllController($element) {
+      function selectAllController($element, $timeout) {
          $element.on('click', function() {
-            var isInputSelected = $element[0].selectionEnd - $element[0].selectionStart != 0;
+            var isInputSelected = $element[0].selectionEnd != $element[0].selectionStart;
             if (!isInputSelected) {
                $element[0].select();
             }
+
+           $timeout(function() {
+           }, 100)
+
          });
       }
    }

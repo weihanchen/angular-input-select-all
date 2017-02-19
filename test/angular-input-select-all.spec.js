@@ -13,7 +13,7 @@ describe('angular-input-select-all directive', function() {
    function compile() {
       var templete = '<div><input placeholder="Please input some text..." ng-model="text" input-select-all /></div>';
       element = $compile(templete)($scope);
-      document.body.appendChild(element[0]);//append element to dom
+      document.body.appendChild(element[0]); //append element to dom
       $scope.$digest();
       isolateScope = element.isolateScope();
    }
@@ -22,19 +22,38 @@ describe('angular-input-select-all directive', function() {
       getInput().val(value);
    }
 
-   function clickInput() {
-      var input = getInput();
-      return input[0].click();
-   }
-
    function getInput() {
       return element.find('input');
    }
 
+   function getInputSelectionCount() {
+      var input = getInput();
+      return input[0].selectionEnd - input[0].selectionStart;
+   }
+
    function isInputSelectAll() {
       var input = getInput();
-      return input.val().length === (input[0].selectionEnd - input[0].selectionStart);
+      return input.val().length === getInputSelectionCount();
    }
+
+   function inputSelect(start, end) {
+      var input = getInput()[0];
+      if (input.setSelectionRange) { /* WebKit */
+         input.focus();
+         input.setSelectionRange(start, end);
+      } else if (input.createTextRange) { /* IE */
+         var range = input.createTextRange();
+         range.collapse(true);
+         range.moveEnd('character', end);
+         range.moveStart('character', start);
+         range.select();
+      } else if (input.selectionStart) {
+         input.selectionStart = start;
+         input.selectionEnd = end;
+      }
+
+   }
+
 
 
    describe('basic features', function() {
@@ -45,11 +64,40 @@ describe('angular-input-select-all directive', function() {
 
       it('trigger select all if it first click', function() {
          //Act
-         clickInput();
-         $scope.$digest();
+         getInput()[0].click();
+         $timeout.flush();
          //Assert
          expect(isInputSelectAll()).toBe(true);
       });
+
+      it('does not select all when click in selected region', function() {
+         //Arrange
+         var input = getInput();
+         //Act
+         input[0].click();
+         $timeout.flush();
+         input[0].click();
+         inputSelect();
+         $timeout.flush();
+         //Assert
+         expect(getInputSelectionCount()).toEqual(0);
+      });
+
+      it('trigger select all if not click in selected section', function() {
+         //Arrange
+         var input = getInput();
+         var length = input.val().length;
+         var end = length / 2;
+         //Act
+         inputSelect(0, end);
+         input[0].click();
+         $timeout.flush();
+         inputSelect(length, length);
+         input[0].click();
+         $timeout.flush();
+         //Assert
+         expect(getInputSelectionCount()).toEqual(length);
+      })
    });
 
 });

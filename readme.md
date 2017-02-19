@@ -16,7 +16,6 @@ $ npm run bower:install
 ## Test
 ```
 $npm run test
-$npm run test:coverage
 ```
 
 ## Installing
