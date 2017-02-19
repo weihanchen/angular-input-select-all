@@ -1,5 +1,6 @@
 angular-input-select-all
 ===
+Learning how to use grunt tasks、bash script、travis ci for automated deployment.
 [![Build Status](https://travis-ci.org/weihanchen/angular-input-select-all.svg?branch=master)](https://travis-ci.org/weihanchen/angular-input-select-all)
 
 ## [Demo](https://weihanchen.github.io/angular-input-select-all/)
@@ -31,7 +32,7 @@ run command `$npm run release` then generate folder list
 * NPM(`npm install angular-input-select-all`)
 
 Add the scripts to your application.
-```
+```html
 <script src="angular.js"></script>
 <script src="build/angular-input-select-all.min.js"></script>
 ```

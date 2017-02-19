@@ -12,7 +12,6 @@ module.exports = function(grunt) {
             data = require(path + option);
          object[key] = typeof data === 'function' ? data(grunt) : data;
       });
-
       return object;
    }
 
@@ -93,6 +92,7 @@ module.exports = function(grunt) {
    grunt.registerTask('release', [
       'pack',
       'copy:examples',
+      'coveralls',
       'update-bower-version'
    ]);
 
