@@ -15,7 +15,6 @@ Learning how to use grunt tasks、bash script、travis ci for automated deployme
 ## General requirements before running on development
 ```
 $ npm install
-$ npm run bower:install
 ```
 
 ## Test

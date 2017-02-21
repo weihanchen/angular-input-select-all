@@ -18,28 +18,28 @@ module.exports = function(grunt) {
    var config = {
       pkg: grunt.file.readJSON('package.json'),
       bower: {
-        js: {
-          angular: 'bower_components/angular/angular.min.js',
-          jquery: 'bower_components/jquery/dist/jquery.min.js'
-        },
-        file: 'bower.json'
+         js: {
+            angular: 'bower_components/angular/angular.min.js',
+            jquery: 'bower_components/jquery/dist/jquery.min.js'
+         },
+         file: 'bower.json'
       },
       examples: {
          js: {
-           plugins: {
-             root: 'examples/js/plugins',
-             angular: 'examples/js/plugins/angular',
-             materialDesignLite: 'examples/js/plugins/material-design-lite',
-             jquery: 'examples/js/plugins/jquery'
-           }
+            plugins: {
+               root: 'examples/js/plugins',
+               angular: 'examples/js/plugins/angular',
+               materialDesignLite: 'examples/js/plugins/material-design-lite',
+               jquery: 'examples/js/plugins/jquery'
+            }
          },
          css: {
-           plugins: {
-             root: 'examples/css/plugins',
-             fontAwesome: 'examples/css/plugins/font-awesome',
-             fonts: 'examples/css/plugins/fonts',
-             materialDesignLite: 'examples/css/plugins/material-design-lite'
-           }
+            plugins: {
+               root: 'examples/css/plugins',
+               fontAwesome: 'examples/css/plugins/font-awesome',
+               fonts: 'examples/css/plugins/fonts',
+               materialDesignLite: 'examples/css/plugins/material-design-lite'
+            }
          }
       },
       files: {
@@ -53,18 +53,18 @@ module.exports = function(grunt) {
          }
       },
       npm: {
-        js: {
-          angular: 'node_modules/angular/angular.min.js',
-          angularMocks: 'node_modules/angular-mocks/angular-mocks.js',
-          materialDesignLite: 'node_modules/material-design-lite/material.min.js'
-        },
-        css: {
-          fontAwesome: 'node_modules/font-awesome/css/font-awesome.min.css',
-          materialDesignLite: 'node_modules/material-design-lite/material.min.css'
-        },
-        fonts: {
-          fontAwesome: 'node_modules/font-awesome/fonts'
-        }
+         js: {
+            angular: 'node_modules/angular/angular.min.js',
+            angularMocks: 'node_modules/angular-mocks/angular-mocks.js',
+            materialDesignLite: 'node_modules/material-design-lite/material.min.js'
+         },
+         css: {
+            fontAwesome: 'node_modules/font-awesome/css/font-awesome.min.css',
+            materialDesignLite: 'node_modules/material-design-lite/material.min.css'
+         },
+         fonts: {
+            fontAwesome: 'node_modules/font-awesome/fonts'
+         }
       },
       banners: {
          unminified: '/*!\n' +

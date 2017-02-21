@@ -1,30 +1,36 @@
 {
-  "name": "angular-input-select-all",
-  "version": "0.1.0",
-  "description": "Simple input select all, prevent interrupted user's operation",
-  "main": [
-    "dist/angular-input-select-all.js"
-  ],
-  "authors": [
-    "weihanchen"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/weihanchen/angular-input-select-all.git"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "angular": "^1.3.0"
-  },
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "src",
-    "test",
-    "tests",
-    "lib",
-    "examples"
-  ],
-  "private": false
+   "name": "angular-input-select-all",
+   "version": "0.1.0",
+   "description": "Simple input select all, prevent interrupted user's operation",
+   "main": [
+      "build/angular-input-select-all.js"
+   ],
+   "authors": [
+      "weihanchen"
+   ],
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/weihanchen/angular-input-select-all.git"
+   },
+   "license": "MIT",
+   "dependencies": {
+      "angular": "^1.3.0"
+   },
+   "ignore": [
+      "**/.*",
+      "node_modules",
+      "bower_components",
+      "src",
+      "test",
+      "tests",
+      "lib",
+      "examples",
+      "run.js",
+      "gruntfile.js",
+      "karma.conf.js",
+      "scripts",
+      "grunt",
+      "coverage"
+   ],
+   "private": false
 }
